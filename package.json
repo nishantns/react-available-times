@@ -10,8 +10,9 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "clean": "rimraf dist",
-    "build": "npm run clean && webpack",
+    "build": "webpack src/index.js dist/index.js",
     "lint": "eslint . --ext=.js,.jsx",
     "start-test": "node src/testServer.js",
     "prepublish": "npm run test && npm run build",
